@@ -1,9 +1,10 @@
 
 import React from 'react';
-import MainBannerimage from '../../assets/images/Main-banner.jpg';
+import MainBannerimage from '../../assets/images/meeshoBanner.jpg';
 import Products from '../Products/Products';
 import PromoSection from '../PromoSection/PromoSection';
 import App from '../NewCollections/App';
+
 
 
 

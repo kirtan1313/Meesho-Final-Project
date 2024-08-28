@@ -50,8 +50,8 @@ function Products() {
   return (
     <div className="product-grid container col-12">
       {products.map((product) => (
-        <div key={product.id} className="product-card col-3">
-          <img src={product.imageUrl} alt={product.name} className="product-image" />
+        <div key={product.id} className="product-card col-3" style={{height:'550px'}}>
+          <img src={product.imageUrl} alt={product.name} className="product-image p-2" />
           <h2 className="product-name p-font">{product.name}</h2>
           <p className="product-price">{product.price}</p>
         </div>

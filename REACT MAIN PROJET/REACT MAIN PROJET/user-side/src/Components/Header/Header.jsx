@@ -37,7 +37,7 @@ function Header() {
                             {
                                 navlink.map((data)=>{
                                     return(
-                                        <Link to={data.path} className='text-decoration-none text-center icon-color '>
+                                        <Link to={data.path} className='text-decoration-none text-white text-center icon-color '>
                                         <li className='text-decoration-none text-center icon-color '>{data.name}</li>
                                     </Link>
                                     )
