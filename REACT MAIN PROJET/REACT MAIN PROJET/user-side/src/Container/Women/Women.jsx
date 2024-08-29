@@ -86,7 +86,7 @@ const Women = () => {
               <img src={product.image}  className='w-100 p-3 womens-imgSet' />
               <h5 className='welcome-font fw-bold fs-5 pt-2'>{product.productName}</h5>
               <p className='welcome-font fs-6'>₹{product.price}</p>
-              <button className='py-1 px-2 border-0 rounded-2 text-white women-addto-cart-btn p-font'>Add To Cart</button>
+              <button className='py-1 px-2 border-0 rounded-2 text-white women-addto-cart-btn p-font'>Buy Now</button>
             </div>
           ))}
         </div>

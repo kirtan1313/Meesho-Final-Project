@@ -11,6 +11,12 @@ const Men = () => {
   const dispatch = useDispatch();
   console.log('datatatata', allproducts);
 
+  const menProduct = allproducts.filter(
+    pro => pro.category.toLowerCase() === 'men'
+  )
+
+  console.log('menProduct',menProduct);
+
   useEffect(() => {
     dispatch(getProductsAsync())
   }, [dispatch])
@@ -31,7 +37,7 @@ const Men = () => {
     });
   };
 
-  const filteredProducts = allproducts.filter(product => {
+  const filteredProducts = menProduct.filter(product => {
     const isWithinPriceRange = product.price >= filters.priceRange[0] && product.price <= filters.priceRange[1];
     const matchesProductType = filters.productType.length === 0 || filters.productType.includes(product.type);
     const matchesSize = filters.size.length === 0 || filters.size.some(size => product.size.includes(size));
@@ -74,10 +80,10 @@ const Men = () => {
         <div className="product-grid justify-content-center">
           {filteredProducts.map(product => (
             <div key={product.id} className="product-card col-3 pb-3 ">
-              <img src={product.image} alt={product.productName} className='w-100 p-3 womens-imgSet' />
-              <h5 className='welcome-font fw-bold fs-5 pt-2'>{product.category}</h5>
+              <img src={product.image} className='w-100 p-3 womens-imgSet' />
+              <h5 className='welcome-font fw-bold fs-5 pt-2'>{product.productName}</h5>
               <p className='welcome-font fs-6'>₹{product.price}</p>
-              <button className='py-1 px-2 border-0 rounded-2 text-white women-addto-cart-btn p-font'>Add To Cart</button>
+              <button className='py-1 px-2 border-0 rounded-2 text-white women-addto-cart-btn p-font'>Buy Now</button>
             </div>
           ))}
         </div>
